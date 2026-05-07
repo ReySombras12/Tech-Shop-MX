@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Shop MX</title>
+    <link rel="stylesheet" href="CSS/estilos.css">
+</head>
+<body>
+    <header class="hero">
+        <nav class="top-nav">
+            <div class="nav-buttons">
+                <a href="iniciosesion.html" class="btn btn-nav">Iniciar Sesión</a>
+                <a href="registro.html" class="btn btn-nav">Registrarse</a>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <h1 class="hero-title">Tech Shop MX</h1>
+            <p class="hero-subtitle">Tu tecnología en manos expertas</p>
+            <p class="hero-description">Reparación profesional y venta de dispositivos reacondicionados con garantía. Promovemos la economía circular.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary">Solicitar Reparación</button>
+                <a href="catalogo.html" class="btn btn-secondary">Ver Catálogo</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="catalog">
+            <h2 class="section-title">Catálogo de Recomendados</h2>
+            <div class="products-grid">
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="Img/oppo-reno8-5g.png" alt="OPPO Reno 8 - 5G">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">OPPO Reno 8 - 5G</h3>
+                        <span class="product-badge">Excelente Estado</span>
+                        <p class="product-category">Smartphone Gama Alta</p>
+                        <p class="product-description">Reacondicionado, 256GB, libre de fábrica.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$5,499</span>
+                            <button class="btn btn-small">Detalles</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="Img/Samsung-A56.jpg.jpeg" alt="SAMSUNG A56">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">SAMSUNG A56</h3>
+                        <span class="product-badge">Excelente Estado</span>
+                        <p class="product-category">Smartphone Gamma Media</p>
+                        <p class="product-description">Reacondicionado 128GB, libre de fábrica.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$3,499</span>
+                            <button class="btn btn-small">Detalles</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="repair-section">
+            <h2 class="section-title">Módulo de Solicitud de Reparación</h2>
+            <div class="form-container">
+                <form class="repair-form">
+                    <div class="form-group">
+                        <label for="tipo-dispositivo">Tipo de Dispositivo</label>
+                        <select id="tipo-dispositivo" name="tipo-dispositivo" class="form-control">
+                            <option>Selecciona un dispositivo</option>
+                            <option>Laptop</option>
+                            <option>Smartphone</option>
+                            <option>Tablet</option>
+                            <option>Audifonos</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descripcion-falla">Descripción de la Falla</label>
+                        <textarea id="descripcion-falla" name="descripcion-falla" class="form-control" rows="5" placeholder="Describe detalladamente el problema..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Evidencia (Fotos del daño)</label>
+                        <div class="file-upload" onclick="document.getElementById('evidencia').click()">
+                            <span class="upload-icon">📸</span>
+                            <p>Haz clic para subir imágenes</p>
+                            <span class="upload-hint">Máximo 5 fotos</span>
+                        </div>
+                        <input type="file" id="evidencia" name="evidencia" multiple accept="image/*" style="display:none;">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">Enviar solicitud de diagnóstico</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="tracking-section">
+            <h2 class="section-title">Rastreo de Servicio</h2>
+            <div class="tracking-card">
+                <div class="order-info">
+                    <span class="order-label">Orden:</span>
+                    <span class="order-number">#TS-9842</span>
+                </div>
+                
+                <div class="tracking-steps">
+                    <div class="tracking-step">
+                        <div class="step-indicator completed">✓</div>
+                        <span class="step-label">Diagnóstico</span>
+                    </div>
+                    <div class="tracking-step">
+                        <div class="step-indicator completed">✓</div>
+                        <span class="step-label">Recibido</span>
+                    </div>
+                    <div class="tracking-step">
+                        <div class="step-indicator active">3</div>
+                        <span class="step-label">Reparando</span>
+                    </div>
+                    <div class="tracking-step">
+                        <div class="step-indicator">4</div>
+                        <span class="step-label">Listo</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Tech Shop MX - Todos los derechos reservados</p>
+    </footer>
+    <script src="JS/script.js"></script>
+</body>
+</html>
