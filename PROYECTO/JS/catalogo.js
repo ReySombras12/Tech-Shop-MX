@@ -1,17 +1,11 @@
-// ============================================
 // CATÁLOGO DE DISPOSITIVOS - TECH SHOP MX
-// ============================================
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ============================================
     // BASE DE DATOS SIMULADA DE PRODUCTOS
     // 8 productos por categoría (40 total)
-    // ============================================
-    const productos = [
-        // ============================================
+        const productos = [
         // CELULARES (8)
-        // ============================================
         {
             id: 1,
             categoria: 'celulares',
@@ -101,9 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
             imagen: 'Img/iphone11.jpg'
         },
 
-        // ============================================
         // TABLETS (8)
-        // ============================================
         {
             id: 9,
             categoria: 'tablets',
@@ -285,9 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
             imagen: 'Img/galaxy-buds2.jpg'
         },
 
-        // ============================================
         // LAPTOPS (8)
-        // ============================================
         {
             id: 25,
             categoria: 'laptops',
@@ -377,9 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
             imagen: 'Img/lenovo-legion5.jpg'
         },
 
-        // ============================================
         // COMPUTADORAS DE ESCRITORIO (8)
-        // ============================================
         {
             id: 33,
             categoria: 'computadoras',
@@ -470,9 +458,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    // ============================================
     // ELEMENTOS DEL DOM
-    // ============================================
     const catalogoGrid = document.getElementById('catalogo-grid');
     const filtroCategoria = document.getElementById('filtro-categoria');
     const filtroMarca = document.getElementById('filtro-marca');
@@ -486,23 +472,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('modal-producto');
     const modalClose = document.querySelector('.modal-close');
 
-    // ============================================
     // FUNCIÓN: Formatear precio a moneda
-    // ============================================
     function formatearPrecio(precio) {
         return '$' + precio.toLocaleString('es-MX');
     }
 
-    // ============================================
     // FUNCIÓN: Capitalizar primera letra
-    // ============================================
     function capitalizar(texto) {
         return texto.charAt(0).toUpperCase() + texto.slice(1);
     }
 
-    // ============================================
     // FUNCIÓN: Obtener clase de badge según estado
-    // ============================================
     function obtenerClaseBadge(estado) {
         switch (estado) {
             case 'excelente': return 'badge-excelente';
@@ -512,9 +492,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // ============================================
     // FUNCIÓN: Crear tarjeta de producto
-    // ============================================
     function crearTarjetaProducto(producto) {
         const card = document.createElement('article');
         card.className = 'producto-card';
@@ -555,9 +533,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return card;
     }
 
-    // ============================================
     // FUNCIÓN: Mostrar productos en el grid
-    // ============================================
     function mostrarProductos(productosAMostrar) {
         catalogoGrid.innerHTML = '';
 
@@ -577,9 +553,7 @@ document.addEventListener('DOMContentLoaded', () => {
         contadorSpan.textContent = productosAMostrar.length;
     }
 
-    // ============================================
     // FUNCIÓN: Filtrar productos
-    // ============================================
     function filtrarProductos() {
         const categoria = filtroCategoria.value;
         const marca = filtroMarca.value;
@@ -611,9 +585,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mostrarProductos(productosFiltrados);
     }
 
-    // ============================================
     // FUNCIÓN: Limpiar filtros
-    // ============================================
     function limpiarFiltros() {
         filtroCategoria.value = 'todos';
         filtroMarca.value = 'todas';
@@ -622,9 +594,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mostrarProductos(productos);
     }
 
-    // ============================================
     // FUNCIÓN: Mostrar modal de detalle
-    // ============================================
     function mostrarModal(producto) {
         document.getElementById('modal-img').src = producto.imagen;
         document.getElementById('modal-img').alt = producto.nombre;
@@ -669,10 +639,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
     }
 
-    // ============================================
     // EVENTOS
-    // ============================================
-
+    
     // Botón buscar
     btnBuscar.addEventListener('click', filtrarProductos);
 
@@ -703,8 +671,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ============================================
     // CARGA INICIAL: Mostrar todos los productos
-    // ============================================
     mostrarProductos(productos);
 });
