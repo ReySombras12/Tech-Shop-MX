@@ -1,12 +1,8 @@
-// Esperar a que todo el HTML cargue antes de ejecutar el código
 document.addEventListener('DOMContentLoaded', () => {
 
-    /* =========================================
-       1. MOSTRAR / OCULTAR CONTRASEÑA
-       ========================================= */
+    /* 1. MOSTRAR / OCULTAR CONTRASEÑA */
     const passwordInputs = document.querySelectorAll('input[type="password"]');
     
-    // Si quieres agregar un icono de ojo después, este código servirá
     passwordInputs.forEach(input => {
         input.addEventListener('dblclick', () => { // Con doble clic cambia el tipo
             if (input.type === 'password') {
@@ -19,9 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* =========================================
-       2. VALIDACIÓN DEL FORMULARIO DE LOGIN
-       ========================================= */
+    /* 2. VALIDACIÓN DEL FORMULARIO DE LOGIN*/
     const loginForm = document.querySelector('.login-form');
     if (loginForm) {
         loginForm.addEventListener('submit', (e) => {
@@ -36,13 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             alert(`¡Bienvenido, ${identifier}! Iniciando sesión...`);
-            // Aquí es donde después conectarás con tu base de datos MySQL
         });
     }
 
-    /* =========================================
-       3. SIMULACIÓN DE REGISTRO
-       ========================================= */
+    /* 3. SIMULACIÓN DE REGISTRO */
     const registroForm = document.querySelector('form[action="/procesar_registro"]');
     if (registroForm) {
         registroForm.addEventListener('submit', (e) => {
@@ -61,9 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* =========================================
-       4. MÓDULO DE REPARACIÓN (Pág. Principal)
-       ========================================= */
+    /* 4. MÓDULO DE REPARACIÓN (Pág. Principal)*/
     const repairForm = document.querySelector('.repair-form');
     if (repairForm) {
         repairForm.addEventListener('submit', (e) => {
