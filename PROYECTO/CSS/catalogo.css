@@ -1,7 +1,3 @@
-/* =========================================
-   ESTILOS DEL CATÁLOGO
-   ========================================= */
-
 /* HEADER DEL CATÁLOGO */
 .catalogo-header {
     display: flex;
@@ -298,9 +294,7 @@
     margin-bottom: 1.5rem;
 }
 
-/* =========================================
-   MODAL DE DETALLE
-   ========================================= */
+/* MODAL DE DETALLE */
 .modal {
     display: none;
     position: fixed;
